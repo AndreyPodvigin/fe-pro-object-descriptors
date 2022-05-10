@@ -54,7 +54,7 @@ describe('all funcs', () => {
       expect(isObjectAnyFrozen(Object.preventExtensions({}))).toStrictEqual(
         true
       );
-      expect(isObjectAnyFrozen({})).toStrictEqual(true);
+      expect(isObjectAnyFrozen({})).toStrictEqual(false);
     });
   });
 

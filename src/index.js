@@ -43,7 +43,7 @@ export const isObjectAnyFrozen = (object) => {
  */
 export const assignLockedValues = (object, propertyName) => {
   const resultObject = Object.assign({}, object);
-  if (resultObject[propertyName]) {
+  if (resultObject.hasOwnProperty(propertyName)) {
     Object.defineProperty(resultObject, propertyName, { writable: false });
     return resultObject;
   } else {

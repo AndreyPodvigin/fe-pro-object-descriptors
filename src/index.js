@@ -48,6 +48,7 @@ export const assignLockedValues = (object, propertyName) => {
     return resultObject;
   } else {
     resultObject[propertyName] = null;
+    Object.defineProperty(resultObject, propertyName, { writable: false })
     return resultObject;
   }
 };
